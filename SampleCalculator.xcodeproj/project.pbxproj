@@ -22,6 +22,7 @@
 		B3730855192F1FC000474174 /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3730853192F1FC000474174 /* CalculatorViewController.m */; };
 		B3730856192F1FC000474174 /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3730854192F1FC000474174 /* CalculatorViewController.xib */; };
 		B3730859192F218B00474174 /* NumButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B3730858192F218B00474174 /* NumButton.m */; };
+		B3C93FE6193005F900D8E703 /* NumLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C93FE5193005F900D8E703 /* NumLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		B3730854192F1FC000474174 /* CalculatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculatorViewController.xib; sourceTree = "<group>"; };
 		B3730857192F218B00474174 /* NumButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumButton.h; sourceTree = "<group>"; };
 		B3730858192F218B00474174 /* NumButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumButton.m; sourceTree = "<group>"; };
+		B3C93FE4193005F900D8E703 /* NumLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumLabel.h; sourceTree = "<group>"; };
+		B3C93FE5193005F900D8E703 /* NumLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 				B373082A192F1F9600474174 /* Supporting Files */,
 				B3730852192F1FC000474174 /* CalculatorViewController.h */,
 				B3730853192F1FC000474174 /* CalculatorViewController.m */,
+				B3C93FE4193005F900D8E703 /* NumLabel.h */,
+				B3C93FE5193005F900D8E703 /* NumLabel.m */,
 				B3730854192F1FC000474174 /* CalculatorViewController.xib */,
 				B3730857192F218B00474174 /* NumButton.h */,
 				B3730858192F218B00474174 /* NumButton.m */,
@@ -255,6 +260,7 @@
 			files = (
 				B3730834192F1F9600474174 /* AppDelegate.m in Sources */,
 				B3730830192F1F9600474174 /* main.m in Sources */,
+				B3C93FE6193005F900D8E703 /* NumLabel.m in Sources */,
 				B3730859192F218B00474174 /* NumButton.m in Sources */,
 				B3730855192F1FC000474174 /* CalculatorViewController.m in Sources */,
 			);

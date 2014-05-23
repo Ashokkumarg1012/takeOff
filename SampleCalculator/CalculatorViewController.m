@@ -37,6 +37,7 @@
     
     _label.text = @"0";
     _label.textAlignment = NSTextAlignmentRight;
+    _label.font = [UIFont boldSystemFontOfSize:40.0f];
     
     _calcType = @"default";
     _numStock = 0;
