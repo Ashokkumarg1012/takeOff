@@ -10,8 +10,6 @@
 
 @interface CalculatorViewController : UIViewController
 
-
 @property (nonatomic, weak) IBOutlet UILabel* label;
-@property (nonatomic, weak) IBOutlet UIButton* button;
 
 @end

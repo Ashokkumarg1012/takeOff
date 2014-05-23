@@ -56,7 +56,7 @@
 - (IBAction)numButtonAction:(id)sender
 {
     
-    NSString* num = [NSString stringWithFormat:@"%ld", ((UIButton*)sender).tag];
+    NSString* num = [NSString stringWithFormat:@"%ld", (long)((UIButton*)sender).tag];
     
     if(_typing == YES){
         
@@ -88,8 +88,6 @@
     }
     
     _numStock = [[self CommaDelete:_label.text] integerValue];
-    
-    NSLog(@"%ld", _numStock);
     
 
 }

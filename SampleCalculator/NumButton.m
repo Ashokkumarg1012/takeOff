@@ -27,8 +27,9 @@
 - (void)drawRect:(CGRect)rect
 {
     // Drawing code
-    NSString* numStr = [NSString stringWithFormat:@"%ld", self.tag];
+    NSString* numStr = [NSString stringWithFormat:@"%ld", (long)self.tag];
     [self setTitle:numStr forState:UIControlStateNormal];
+    
 }
 
 @end
