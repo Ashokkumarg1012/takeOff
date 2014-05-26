@@ -61,8 +61,8 @@
     
     if(_typing == YES){
         
-        NSString* appendNum = [[self CommaDelete:_label.text] stringByAppendingString:num];
-        NSString* formatNum = [self createStringAddedCommaFromInt:[appendNum integerValue]];
+        NSString* appendNum = [[self deleteComma:_label.text] stringByAppendingString:num];
+        NSString* formatNum = [self addComma:[appendNum integerValue]];
         _label.text = formatNum;
         
     }else{
@@ -87,8 +87,8 @@
         _typing = NO;
     }
     
-    _numStock = [[self CommaDelete:_label.text] integerValue];
-    NSLog(@"Stock: %ld", _numStock);
+    _numStock = [[self deleteComma:_label.text] integerValue];
+    NSLog(@"Stock: %ld", (long)_numStock);
     
 
 }
@@ -97,8 +97,6 @@
 // 合計ボタン
 - (IBAction)equalAction:(id)sender
 {
-    
-    
     
     if ([_calcType isEqual:@"plus"]) {
         
@@ -132,23 +130,23 @@
 // 足し算
 - (void)addition
 {
-    _total = _numStock + [[self CommaDelete:_label.text] integerValue];
-    _label.text = [self createStringAddedCommaFromInt:_total];
+    _total = _numStock + [[self deleteComma:_label.text] integerValue];
+    _label.text = [self addComma:_total];
 }
 
 
 // 引き算
 - (void)subtraction
 {
-    _total = _numStock - [[self CommaDelete:_label.text] integerValue];
+    _total = _numStock - [[self deleteComma:_label.text] integerValue];
     if(_numStock != 0){
-        _label.text = [self createStringAddedCommaFromInt:_total];
+        _label.text = [self addComma:_total];
     }
 }
 
 
 // カンマを追加します
-- (NSString *)createStringAddedCommaFromInt:(NSInteger)targetNumber
+- (NSString *)addComma:(NSInteger)targetNumber
 {
     NSNumberFormatter *_format = [[NSNumberFormatter alloc] init];
     [_format setNumberStyle:NSNumberFormatterDecimalStyle];
@@ -160,7 +158,7 @@
 
 
 // カンマを取り除きます
-- (NSString *)CommaDelete:(NSString *)targetString;
+- (NSString *)deleteComma:(NSString *)targetString;
 {
     NSString *_mysetString = [NSString stringWithFormat:@"%@",targetString];
     NSString *_mysetString2= [_mysetString stringByReplacingOccurrencesOfString:@"," withString:@""];
