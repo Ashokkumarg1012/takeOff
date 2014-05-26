@@ -63,7 +63,6 @@
         
         NSString* appendNum = [[self CommaDelete:_label.text] stringByAppendingString:num];
         NSString* formatNum = [self createStringAddedCommaFromInt:[appendNum integerValue]];
-        NSLog(@"%@", formatNum);
         _label.text = formatNum;
         
     }else{
@@ -89,6 +88,7 @@
     }
     
     _numStock = [[self CommaDelete:_label.text] integerValue];
+    NSLog(@"Stock: %ld", _numStock);
     
 
 }
@@ -98,18 +98,19 @@
 - (IBAction)equalAction:(id)sender
 {
     
-    _typing = NO;
+    
     
     if ([_calcType isEqual:@"plus"]) {
         
         [self addition];
         
-    }else if ([_calcType isEqual:@"plus"]) {
+    }else if ([_calcType isEqual:@"minus"]) {
         
         [self subtraction];
         
     }
     
+    _typing = NO;
     _numStock = 0;
 
 }
