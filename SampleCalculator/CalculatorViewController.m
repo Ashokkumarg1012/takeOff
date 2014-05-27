@@ -77,15 +77,31 @@
 - (IBAction)calcAction:(UIButton*)sender
 {
     
-    if(sender.tag == 0){
-        _calcType = @"plus";
+    
+    if ([_calcType isEqual:@"plus"]) {
+        
         [self addition];
-        _typing = NO;
-    }else{
-        _calcType = @"minus";
+        
+    }else if ([_calcType isEqual:@"minus"]) {
+        
         [self subtraction];
-        _typing = NO;
+        
     }
+    
+    if(sender.tag == 0){
+        
+        //[self addition];
+        _typing = NO;
+        _calcType = @"plus";
+    }else{
+        
+        //[self subtraction];
+        _typing = NO;
+        _calcType = @"minus";
+    }
+    
+    
+    
     
     _numStock = [[self deleteComma:_label.text] integerValue];
     NSLog(@"Stock: %ld", (long)_numStock);
